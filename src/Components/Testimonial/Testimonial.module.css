@@ -1,0 +1,87 @@
+.TestimonialWrapper {
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.TestimonialWrapper h2 {
+    margin-bottom: 50px;
+    text-align: center;
+}
+.Slideelement {
+    position: absolute;
+    top: 0;
+    right: -20%;
+
+}
+.TestimonialCard {
+    background-color: var(--primary-color);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+}
+
+.TestimonialCard p {
+    font-size: 20px;
+    color: #FFF;
+}
+
+.TestimonialCard .Profile_img {
+    width: 200px;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+.TestimonialCard .Profile_img .Profile_details {
+    position: absolute;
+    bottom: -20%;
+    left: 0;
+    width: 100%;
+    background-color: #1e1e1e;
+    transition: .6s;
+    padding: 5px;
+
+}
+
+.TestimonialCard .Profile_img:hover .Profile_details {
+    bottom: 0;
+
+}
+
+.TestimonialCard .Profile_img .Profile_details h4 {
+    font-size: 16px;
+    color: var(--primary-color);
+}
+
+.TestimonialCard .Profile_img .Profile_details p {
+    font-size: 14px;
+}
+
+.TestimonialCard .Profile_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+}
+
+.swiper {
+    width: 100%;
+}
+
+#Quotes {
+    position: absolute;
+    top: 55%;
+    right: 6%;
+    font-size: 10rem;
+    opacity: .2;
+}
+
+@media screen andb (max-width:1440px) {
+    .Slideelement {
+        display: none;
+    }
+}

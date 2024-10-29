@@ -1,0 +1,227 @@
+.TmenuWrapper {
+    background-color: #f4fde7;
+    gap: 70px;
+}
+
+.menuCards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.Card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.Card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+    z-index: 1;
+}
+
+.Card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.Card .Price,
+.Card .Detail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    transition: .6s;
+}
+
+.Card .Detail {
+    padding: 20px;
+    width: 100%;
+    background-color: #FFF;
+    top: 74%;
+}
+
+.Card:hover .Detail {
+    top: 100%
+}
+
+.Card .Price {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #FFF;
+    top: 100%
+}
+
+.Card:hover .Price {
+    top: 80%
+}
+
+.Card .Price i {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: 18px;
+    background-color: #FFF;
+    border-radius: 8px;
+    color: #1e1e1e;
+    font-weight: 800;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.23);
+    transition: .6s;
+}
+
+.Card .Price i:hover {
+    color: #FFF;
+    background-color: var(--primary-color);
+}
+
+.Service_Cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.Service_Cards .Service_Card {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #FFF;
+    border-radius: 8px;
+    transition: .6s;
+    position: relative;
+    z-index: 1;
+}
+
+.Service_Cards .Service_Card::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgb(133, 171, 5, 0.9);
+    border-radius: 8px;
+    top: 0;
+    left: 0;
+    transition: .2s;
+    z-index: -1;
+    opacity: 0;
+}
+
+.Service_Cards .Service_Card:hover:after {
+    opacity: 1;
+
+}
+
+
+.Service_Cards .Service_Card:hover:nth-child(1) {
+    background: url(./../../assets/images/service-1.jpg);
+    background-size: cover;
+}
+
+.Service_Cards .Service_Card:hover:nth-child(2) {
+    background: url(./../../assets/images/service-2.jpg);
+    background-size: cover;
+}
+
+.Service_Cards .Service_Card:hover:nth-child(3) {
+    background: url(./../../assets/images/service-3.jpg);
+    background-size: cover;
+}
+
+.Service_Cards .Service_Card:hover:nth-child(4) {
+    background: url(./../../assets/images/service-4.jpg);
+    background-size: cover;
+}
+
+
+.Service_Cards .Service_Card i {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #ffc822;
+    font-weight: 300;
+}
+
+.Service_Cards .Service_Card h4 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+@media screen and (max-width:1600px) {
+    .Card .Detail {
+        top: 70%;
+    }
+}
+
+@media screen and (max-width:1400px) {
+    .Card .Detail {
+        top: 55%;
+    }
+}
+
+@media screen and (max-width:1100px) {
+    .Card .Detail {
+        top: 78%;
+    }
+
+    .menuCards, .Service_Cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width:900px) {
+    .Card .Detail {
+        top: 88%;
+    }
+
+    .Card:hover .Price {
+        top: 90%
+    }
+
+    .menuCards, .Service_Cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (max-width:768px) {
+    .Card .Detail {
+        top: 88%;
+    }
+
+    .Card:hover .Price {
+        top: 85%
+    }
+
+    .menuCards, .Service_Cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (max-width:430px) {
+    .Card .Detail {
+        top: 75%;
+    }
+
+    .Card:hover .Price {
+        top: 80%
+    }
+
+    .menuCards, .Service_Cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

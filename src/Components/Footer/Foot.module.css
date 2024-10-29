@@ -1,0 +1,157 @@
+.FooterWrapper {
+    flex-direction: row !important;
+    background: url(./../../assets/images/banner.png);
+    background-attachment: fixed;
+    color: #FFF;
+    position: relative;
+    z-index: 1;
+}
+
+.FooterWrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1e1e1eeb;
+    z-index: -1;
+}
+
+.FooterWrapper img {
+    position: absolute;
+    bottom: 10%;
+    left: 0%;
+}
+
+.Footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.FooterForm {
+    padding: 20px;
+    background-color: var(--primary-color);
+    display: flex;
+    width: 550px;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: -120px;
+}
+
+.FooterForm button {
+    background-color: #FFF;
+    border: 2px solid #FFF;
+}
+
+.FooterForm button:hover {
+    border-color: #1e1e1e;
+}
+
+.FooterForm button::before {
+    background-color: var(--primary-color);
+}
+
+.FooterForm button::after {
+    color: #1e1e1eeb;
+}
+
+.FooterForm span {
+    color: var(--primary-color);
+}
+
+.FooterForm h2 {
+    color: #FFF;
+    font-size: 45px;
+}
+
+.FooterForm p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.input_wrapper {
+    width: 100%;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.input_wrapper input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 0 8px;
+    background: transparent;
+    outline: none;
+}
+
+.input_wrapper input::placeholder {
+    color: #FFF;
+}
+
+textarea {
+    height: 100px;
+    padding: 8px;
+    outline: none;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+textarea::placeholder {
+    color: #FFF;
+}
+
+.FooterLinks {
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.FooterLinks h3 {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.FooterLinks p, .FooterLink a {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: .6s;
+    cursor: pointer;
+}
+
+.FooterLinks p:hover, .FooterLink a:hover {
+    color: #FFF;
+}
+
+@media screen and (max-width:1400px) {
+    .Footer {
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+    }
+
+    .FooterForm {
+        max-width: 360px;
+    }
+
+    .FooterWrapper img {
+        display: none;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .Footer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .FooterForm {
+        max-width: 360px;
+        margin: 0;
+    }
+}
